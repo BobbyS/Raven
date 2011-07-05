@@ -112,7 +112,7 @@ var Bot_AggroGoalTweaker        = 1.0;
 //use these values to tweak the amount that each steering force
 //contributes to the total steering force
 var SeparationWeight            = 10.0;
-var WallAvoidanceWeight         = 10.0;
+var WallAvoidanceWeight         = 25.0;
 var WanderWeight                = 1.0;
 var SeekWeight                  = 0.5;
 var ArriveWeight                =  1.0;

@@ -315,6 +315,15 @@ public class RavenSteering {
 			}
 
 		}//next feeler
+		Vector2D normalForce = new Vector2D (SteeringForce);
+		normalForce.normalize();
+		Vector2D botFromWall = ravenBot.position.sub(ClosestPoint);
+		botFromWall.normalize();
+		double cosine = botFromWall.dot(normalForce);
+		if(cosine < 0)
+		{
+			SteeringForce = SteeringForce.getReverse();
+		}
 
 		return SteeringForce;
 
